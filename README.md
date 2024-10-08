@@ -1,7 +1,7 @@
 This is a simple script to get mask of emission for NGC253.
 
-We have datacube for NGC253 in H13CN(1-0), HCNH+(2-1), (3-2), (4-3), and (5-4), but some velocity components are contaminated by other emission lines within the band along the line of sight.
+We have datacubes for NGC253 observed in several molecular lines: H13CN(1-0), HCNH+(2-1), HCNH+(3-2), HCNH+(4-3), and HCNH+(5-4). However, some velocity components are contaminated by other emission lines within the band along the line of sight, making it challenging to isolate the emission from each transition.
 
-To solve this, we use HCNH+(2-1) as an initial mask since it has no other strong lines in its band. The mask is then expanded and reprojected to other observed lines.
+To address this, we use the HCNH+(2-1) line, which is free from strong contaminating lines, as an initial mask. This mask is then expanded and reprojected onto the other observed lines.
 
-HCNH+(4-3) needs further attention. Strong contaminations are found at the GMC-3, and 5. So their masks are further removed from the mask generated in last step.
+For the HCNH+(4-3) transition, further adjustments are required due to significant contamination in regions such as GMC-3 and GMC-5. The emission in these regions is manually excluded from the mask generated in the previous step.
